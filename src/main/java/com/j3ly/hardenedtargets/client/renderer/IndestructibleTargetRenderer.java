@@ -28,6 +28,8 @@ import java.util.Optional;
 import java.util.UUID;
 
 public class IndestructibleTargetRenderer implements BlockEntityRenderer<IndestructibleTargetBlockEntity> {
+    private static final ResourceLocation INDESTRUCTIBLE_TEXTURE = new ResourceLocation("hardenedtargets", "textures/entity/indestructible_target.png");
+
     public IndestructibleTargetRenderer(BlockEntityRendererProvider.Context context) {}
 
     public static Optional<BedrockModel> getModel() {
@@ -53,7 +55,7 @@ public class IndestructibleTargetRenderer implements BlockEntityRenderer<Indestr
             poseStack.mulPose(Axis.ZN.rotationDegrees(180.0f));
             poseStack.translate(0, -1.275, 0.0125);
 
-            RenderType renderType = RenderType.entityCutout(InternalAssetLoader.TARGET_TEXTURE_LOCATION);
+            RenderType renderType = RenderType.entityCutout(INDESTRUCTIBLE_TEXTURE);
             model.render(poseStack, ItemDisplayContext.NONE, renderType, packedLight, packedOverlay);
 
             GameProfile owner = be.getOwner();
