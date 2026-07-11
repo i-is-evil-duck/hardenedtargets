@@ -31,6 +31,8 @@ public class HardenedTargetsMod {
             modBus.addListener((EntityRenderersEvent.RegisterRenderers event) -> {
                 event.registerBlockEntityRenderer(ModBlockEntities.REINFORCED_TARGET_BE.get(),
                         com.j3ly.hardenedtargets.client.renderer.HardenedTargetRenderer::new);
+                event.registerBlockEntityRenderer(ModBlockEntities.INDESTRUCTIBLE_TARGET_BE.get(),
+                        com.j3ly.hardenedtargets.client.renderer.IndestructibleTargetRenderer::new);
             });
         });
     }

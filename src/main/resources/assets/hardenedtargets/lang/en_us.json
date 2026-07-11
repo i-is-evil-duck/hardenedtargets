@@ -1,4 +1,5 @@
 {
     "block.hardenedtargets.reinforced_target": "Reinforced Target",
+    "block.hardenedtargets.indestructible_target": "Indestructible Target",
     "itemGroup.hardenedtargets": "Hardened Targets"
 }

@@ -11,4 +11,6 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, HardenedTargetsMod.MOD_ID);
     public static final RegistryObject<Item> REINFORCED_TARGET = ITEMS.register("reinforced_target",
             () -> new BlockItem(ModBlocks.REINFORCED_TARGET.get(), new Item.Properties()));
+    public static final RegistryObject<Item> INDESTRUCTIBLE_TARGET = ITEMS.register("indestructible_target",
+            () -> new BlockItem(ModBlocks.INDESTRUCTIBLE_TARGET.get(), new Item.Properties()));
 }

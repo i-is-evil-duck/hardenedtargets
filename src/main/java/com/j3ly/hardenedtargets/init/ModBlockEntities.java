@@ -2,6 +2,7 @@ package com.j3ly.hardenedtargets.init;
 
 import com.j3ly.hardenedtargets.HardenedTargetsMod;
 import com.j3ly.hardenedtargets.block.entity.HardenedTargetBlockEntity;
+import com.j3ly.hardenedtargets.block.entity.IndestructibleTargetBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -12,4 +13,7 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<HardenedTargetBlockEntity>> REINFORCED_TARGET_BE =
             BLOCK_ENTITIES.register("reinforced_target",
                     () -> BlockEntityType.Builder.of(HardenedTargetBlockEntity::new, ModBlocks.REINFORCED_TARGET.get()).build(null));
+    public static final RegistryObject<BlockEntityType<IndestructibleTargetBlockEntity>> INDESTRUCTIBLE_TARGET_BE =
+            BLOCK_ENTITIES.register("indestructible_target",
+                    () -> BlockEntityType.Builder.of(IndestructibleTargetBlockEntity::new, ModBlocks.INDESTRUCTIBLE_TARGET.get()).build(null));
 }

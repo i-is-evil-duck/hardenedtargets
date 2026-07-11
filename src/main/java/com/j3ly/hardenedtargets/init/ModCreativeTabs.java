@@ -16,6 +16,7 @@ public class ModCreativeTabs {
                     .title(Component.translatable("itemGroup.hardenedtargets"))
                     .displayItems((params, output) -> {
                         output.accept(ModItems.REINFORCED_TARGET.get());
+                        output.accept(ModItems.INDESTRUCTIBLE_TARGET.get());
                     })
                     .build());
 }
