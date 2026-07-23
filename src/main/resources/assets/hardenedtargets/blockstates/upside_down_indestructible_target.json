@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "hardenedtargets:block/upside_down_indestructible_target"
+        }
+    }
+}

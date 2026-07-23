@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "result": {
+        "item": "hardenedtargets:upside_down_indestructible_target"
+    },
+    "pattern": [
+        "III",
+        "ITI",
+        "III"
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "T": {
+            "item": "tacz:target"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "result": {
+        "item": "hardenedtargets:upside_down_reinforced_target"
+    },
+    "pattern": [
+        " P ",
+        "ITI",
+        "III"
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "T": {
+            "item": "tacz:target"
+        },
+        "P": {
+            "tag": "minecraft:planks"
+        }
+    }
+}

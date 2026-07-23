@@ -1,7 +1,7 @@
 {
     "variants": {
         "": {
-            "model": "tacz:block/target"
+            "model": "hardenedtargets:block/reinforced_target"
         }
     }
 }

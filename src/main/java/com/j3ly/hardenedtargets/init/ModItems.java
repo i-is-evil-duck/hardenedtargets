@@ -13,4 +13,8 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.REINFORCED_TARGET.get(), new Item.Properties()));
     public static final RegistryObject<Item> INDESTRUCTIBLE_TARGET = ITEMS.register("indestructible_target",
             () -> new BlockItem(ModBlocks.INDESTRUCTIBLE_TARGET.get(), new Item.Properties()));
+    public static final RegistryObject<Item> UPSIDE_DOWN_REINFORCED_TARGET = ITEMS.register("upside_down_reinforced_target",
+            () -> new BlockItem(ModBlocks.UPSIDE_DOWN_REINFORCED_TARGET.get(), new Item.Properties()));
+    public static final RegistryObject<Item> UPSIDE_DOWN_INDESTRUCTIBLE_TARGET = ITEMS.register("upside_down_indestructible_target",
+            () -> new BlockItem(ModBlocks.UPSIDE_DOWN_INDESTRUCTIBLE_TARGET.get(), new Item.Properties()));
 }

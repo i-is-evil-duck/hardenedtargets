@@ -17,6 +17,8 @@ public class ModCreativeTabs {
                     .displayItems((params, output) -> {
                         output.accept(ModItems.REINFORCED_TARGET.get());
                         output.accept(ModItems.INDESTRUCTIBLE_TARGET.get());
+                        output.accept(ModItems.UPSIDE_DOWN_REINFORCED_TARGET.get());
+                        output.accept(ModItems.UPSIDE_DOWN_INDESTRUCTIBLE_TARGET.get());
                     })
                     .build());
 }

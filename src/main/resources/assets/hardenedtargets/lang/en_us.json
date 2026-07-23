@@ -1,5 +1,7 @@
 {
     "block.hardenedtargets.reinforced_target": "Reinforced Target",
     "block.hardenedtargets.indestructible_target": "Indestructible Target",
+    "block.hardenedtargets.upside_down_reinforced_target": "Upside Down Reinforced Target",
+    "block.hardenedtargets.upside_down_indestructible_target": "Upside Down Indestructible Target",
     "itemGroup.hardenedtargets": "Hardened Targets"
 }

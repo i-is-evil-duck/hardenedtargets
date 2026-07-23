@@ -3,6 +3,8 @@ package com.j3ly.hardenedtargets.init;
 import com.j3ly.hardenedtargets.HardenedTargetsMod;
 import com.j3ly.hardenedtargets.block.entity.HardenedTargetBlockEntity;
 import com.j3ly.hardenedtargets.block.entity.IndestructibleTargetBlockEntity;
+import com.j3ly.hardenedtargets.block.entity.UpsideDownHardenedTargetBlockEntity;
+import com.j3ly.hardenedtargets.block.entity.UpsideDownIndestructibleTargetBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -16,4 +18,10 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<IndestructibleTargetBlockEntity>> INDESTRUCTIBLE_TARGET_BE =
             BLOCK_ENTITIES.register("indestructible_target",
                     () -> BlockEntityType.Builder.of(IndestructibleTargetBlockEntity::new, ModBlocks.INDESTRUCTIBLE_TARGET.get()).build(null));
+    public static final RegistryObject<BlockEntityType<UpsideDownHardenedTargetBlockEntity>> UPSIDE_DOWN_REINFORCED_TARGET_BE =
+            BLOCK_ENTITIES.register("upside_down_reinforced_target",
+                    () -> BlockEntityType.Builder.of(UpsideDownHardenedTargetBlockEntity::new, ModBlocks.UPSIDE_DOWN_REINFORCED_TARGET.get()).build(null));
+    public static final RegistryObject<BlockEntityType<UpsideDownIndestructibleTargetBlockEntity>> UPSIDE_DOWN_INDESTRUCTIBLE_TARGET_BE =
+            BLOCK_ENTITIES.register("upside_down_indestructible_target",
+                    () -> BlockEntityType.Builder.of(UpsideDownIndestructibleTargetBlockEntity::new, ModBlocks.UPSIDE_DOWN_INDESTRUCTIBLE_TARGET.get()).build(null));
 }
