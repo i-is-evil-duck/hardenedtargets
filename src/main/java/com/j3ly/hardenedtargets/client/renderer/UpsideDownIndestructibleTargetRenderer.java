@@ -52,6 +52,7 @@ public class UpsideDownIndestructibleTargetRenderer implements BlockEntityRender
             poseStack.pushPose();
             poseStack.translate(0.5, 0.775, 0.5);
             poseStack.mulPose(Axis.YN.rotationDegrees(facing.get2DDataValue() * 90));
+            poseStack.mulPose(Axis.YN.rotationDegrees(180.0f));
             poseStack.mulPose(Axis.ZN.rotationDegrees(180.0f));
             poseStack.mulPose(Axis.XP.rotationDegrees(180.0f));
             poseStack.translate(0, -1.275, 0.0125);

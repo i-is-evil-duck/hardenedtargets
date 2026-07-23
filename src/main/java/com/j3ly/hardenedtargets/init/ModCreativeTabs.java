@@ -17,14 +17,11 @@ public class ModCreativeTabs {
                     .displayItems((params, output) -> {
                         output.accept(ModItems.REINFORCED_TARGET.get());
                         output.accept(ModItems.INDESTRUCTIBLE_TARGET.get());
-<<<<<<< HEAD
                         output.accept(ModItems.UPSIDE_DOWN_REINFORCED_TARGET.get());
                         output.accept(ModItems.UPSIDE_DOWN_INDESTRUCTIBLE_TARGET.get());
-=======
                         output.accept(ModItems.HANGING_TARGET.get());
                         output.accept(ModItems.HARDENED_HANGING_TARGET.get());
                         output.accept(ModItems.INDESTRUCTIBLE_HANGING_TARGET.get());
->>>>>>> a2340ebf226668284f331a04fbdfbc0a31cfefe1
                     })
                     .build());
 }
