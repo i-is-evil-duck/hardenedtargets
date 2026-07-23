@@ -1,7 +1,13 @@
 {
     "block.hardenedtargets.reinforced_target": "Reinforced Target",
     "block.hardenedtargets.indestructible_target": "Indestructible Target",
+<<<<<<< HEAD
     "block.hardenedtargets.upside_down_reinforced_target": "Upside Down Reinforced Target",
     "block.hardenedtargets.upside_down_indestructible_target": "Upside Down Indestructible Target",
+=======
+    "block.hardenedtargets.hanging_target": "Hanging Target",
+    "block.hardenedtargets.hardened_hanging_target": "Hardened Hanging Target",
+    "block.hardenedtargets.indestructible_hanging_target": "Indestructible Hanging Target",
+>>>>>>> a2340ebf226668284f331a04fbdfbc0a31cfefe1
     "itemGroup.hardenedtargets": "Hardened Targets"
 }

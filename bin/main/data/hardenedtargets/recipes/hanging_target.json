@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "result": {
+        "item": "hardenedtargets:hanging_target"
+    },
+    "pattern": [
+        " P ",
+        "III",
+        "ITI"
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "T": {
+            "item": "tacz:target"
+        },
+        "P": {
+            "tag": "minecraft:planks"
+        }
+    }
+}

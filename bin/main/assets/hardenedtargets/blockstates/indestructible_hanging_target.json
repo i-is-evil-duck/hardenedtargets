@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "hardenedtargets:block/indestructible_hanging_target"
+        }
+    }
+}
