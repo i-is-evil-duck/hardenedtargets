@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "result": {
+        "item": "hardenedtargets:normal_upside_down_target"
+    },
+    "pattern": [
+        " T ",
+        " I ",
+        " I "
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "T": {
+            "item": "tacz:target"
+        }
+    }
+}

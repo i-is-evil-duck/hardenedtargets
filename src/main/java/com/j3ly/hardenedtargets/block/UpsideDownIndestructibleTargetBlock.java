@@ -21,11 +21,28 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 import java.util.UUID;
 
 public class UpsideDownIndestructibleTargetBlock extends TargetBlock {
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        boolean isUpper = state.getValue(HALF) == DoubleBlockHalf.UPPER;
+        boolean isX = state.getValue(FACING).getAxis() == net.minecraft.core.Direction.Axis.X;
+        boolean stand = state.getValue(STAND);
+        if (isUpper) {
+            if (stand) {
+                return isX ? BOX_BOTTOM_STAND_X : BOX_BOTTOM_STAND_Z;
+            }
+            return BOX_BOTTOM_DOWN;
+        }
+        return stand ? (isX ? BOX_UPPER_X : BOX_UPPER_Z) : Shapes.empty();
+    }
+
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         if (state.getValue(HALF) == DoubleBlockHalf.UPPER) {

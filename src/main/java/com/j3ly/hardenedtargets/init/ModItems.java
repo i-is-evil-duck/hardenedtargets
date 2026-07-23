@@ -17,6 +17,8 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.UPSIDE_DOWN_REINFORCED_TARGET.get(), new Item.Properties()));
     public static final RegistryObject<Item> UPSIDE_DOWN_INDESTRUCTIBLE_TARGET = ITEMS.register("upside_down_indestructible_target",
             () -> new BlockItem(ModBlocks.UPSIDE_DOWN_INDESTRUCTIBLE_TARGET.get(), new Item.Properties()));
+    public static final RegistryObject<Item> NORMAL_UPSIDE_DOWN_TARGET = ITEMS.register("normal_upside_down_target",
+            () -> new BlockItem(ModBlocks.NORMAL_UPSIDE_DOWN_TARGET.get(), new Item.Properties()));
     public static final RegistryObject<Item> HANGING_TARGET = ITEMS.register("hanging_target",
             () -> new BlockItem(ModBlocks.HANGING_TARGET.get(), new Item.Properties()));
     public static final RegistryObject<Item> HARDENED_HANGING_TARGET = ITEMS.register("hardened_hanging_target",

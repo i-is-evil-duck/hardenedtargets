@@ -1,6 +1,6 @@
 package com.j3ly.hardenedtargets.block;
 
-import com.j3ly.hardenedtargets.block.entity.UpsideDownHardenedTargetBlockEntity;
+import com.j3ly.hardenedtargets.block.entity.NormalUpsideDownTargetBlockEntity;
 import com.j3ly.hardenedtargets.init.ModBlockEntities;
 import com.mojang.authlib.GameProfile;
 import com.tacz.guns.block.TargetBlock;
@@ -13,8 +13,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
@@ -30,7 +30,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import javax.annotation.Nullable;
 import java.util.UUID;
 
-public class UpsideDownHardenedTargetBlock extends TargetBlock {
+public class NormalUpsideDownTargetBlock extends TargetBlock {
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         boolean isUpper = state.getValue(HALF) == DoubleBlockHalf.UPPER;
@@ -48,15 +48,15 @@ public class UpsideDownHardenedTargetBlock extends TargetBlock {
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         if (state.getValue(HALF) == DoubleBlockHalf.UPPER) {
-            return new UpsideDownHardenedTargetBlockEntity(pos, state);
+            return new NormalUpsideDownTargetBlockEntity(pos, state);
         }
         return null;
     }
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (state.getValue(HALF) == DoubleBlockHalf.UPPER && level.isClientSide && type == ModBlockEntities.UPSIDE_DOWN_REINFORCED_TARGET_BE.get()) {
-            return (lvl, pos, st, be) -> UpsideDownHardenedTargetBlockEntity.clientTick(lvl, pos, st, (UpsideDownHardenedTargetBlockEntity) be);
+        if (state.getValue(HALF) == DoubleBlockHalf.UPPER && level.isClientSide && type == ModBlockEntities.NORMAL_UPSIDE_DOWN_TARGET_BE.get()) {
+            return (lvl, pos, st, be) -> NormalUpsideDownTargetBlockEntity.clientTick(lvl, pos, st, (NormalUpsideDownTargetBlockEntity) be);
         }
         return null;
     }
@@ -69,31 +69,14 @@ public class UpsideDownHardenedTargetBlock extends TargetBlock {
         BlockPos hitPos = isUpper ? hitResult.getBlockPos() : hitResult.getBlockPos().above();
         BlockState targetState = isUpper ? state : level.getBlockState(hitPos);
 
-        float damage = 0;
-        if (projectile instanceof EntityKineticBullet bullet) {
-            damage = bullet.getDamage(hitResult.getLocation());
-        }
-
-        if (level.getBlockEntity(hitPos) instanceof UpsideDownHardenedTargetBlockEntity be) {
-            be.hit(level, targetState, hitResult, isUpper, damage);
-        }
-
-        if (!level.isClientSide && projectile.getOwner() instanceof Player player) {
-            if (level.getBlockEntity(hitPos) instanceof UpsideDownHardenedTargetBlockEntity be) {
-                player.displayClientMessage(
-                        Component.literal(String.format("Health: %.1f / %.1f", be.getHealth(), be.getMaxHealth())),
-                        true);
-            }
+        if (level.getBlockEntity(hitPos) instanceof NormalUpsideDownTargetBlockEntity be) {
+            be.hit(level, targetState, hitResult, isUpper);
         }
     }
 
     @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        boolean wasStanding = state.getValue(STAND);
         super.tick(state, level, pos, random);
-        if (!wasStanding && level.getBlockEntity(pos) instanceof UpsideDownHardenedTargetBlockEntity be) {
-            be.resetDamage();
-        }
     }
 
     @Override
@@ -103,7 +86,7 @@ public class UpsideDownHardenedTargetBlock extends TargetBlock {
             BlockPos abovePos = pos.above();
             BlockState aboveState = level.getBlockState(abovePos);
             if (aboveState.is(this)) {
-                if (level.getBlockEntity(abovePos) instanceof UpsideDownHardenedTargetBlockEntity be) {
+                if (level.getBlockEntity(abovePos) instanceof NormalUpsideDownTargetBlockEntity be) {
                     if (stack.hasCustomHoverName()) {
                         be.setOwner(new GameProfile((UUID) null, stack.getHoverName().getString()));
                         be.setCustomName(stack.getHoverName());
@@ -119,9 +102,9 @@ public class UpsideDownHardenedTargetBlock extends TargetBlock {
         BlockEntity be = state.getValue(HALF) == DoubleBlockHalf.UPPER
                 ? ((LevelAccessor) level).getBlockEntity(pos)
                 : ((LevelAccessor) level).getBlockEntity(pos.above());
-        if (be instanceof UpsideDownHardenedTargetBlockEntity hbe && hbe.getCustomName() != null) {
+        if (be instanceof NormalUpsideDownTargetBlockEntity tbe && tbe.getCustomName() != null) {
             ItemStack stack = new ItemStack(this);
-            stack.setHoverName(hbe.getCustomName());
+            stack.setHoverName(tbe.getCustomName());
             return stack;
         }
         return new ItemStack(this);
