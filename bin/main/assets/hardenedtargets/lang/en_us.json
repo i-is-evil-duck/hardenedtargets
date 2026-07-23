@@ -1,4 +1,8 @@
 {
     "block.hardenedtargets.reinforced_target": "Reinforced Target",
+    "block.hardenedtargets.indestructible_target": "Indestructible Target",
+    "block.hardenedtargets.hanging_target": "Hanging Target",
+    "block.hardenedtargets.hardened_hanging_target": "Hardened Hanging Target",
+    "block.hardenedtargets.indestructible_hanging_target": "Indestructible Hanging Target",
     "itemGroup.hardenedtargets": "Hardened Targets"
 }

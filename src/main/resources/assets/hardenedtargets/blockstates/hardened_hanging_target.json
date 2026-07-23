@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "hardenedtargets:block/hardened_hanging_target"
+        }
+    }
+}

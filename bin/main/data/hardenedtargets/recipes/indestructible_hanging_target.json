@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "result": {
+        "item": "hardenedtargets:indestructible_hanging_target"
+    },
+    "pattern": [
+        "III",
+        "ITI",
+        "III"
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "T": {
+            "item": "tacz:target"
+        }
+    }
+}

@@ -33,6 +33,12 @@ public class HardenedTargetsMod {
                         com.j3ly.hardenedtargets.client.renderer.HardenedTargetRenderer::new);
                 event.registerBlockEntityRenderer(ModBlockEntities.INDESTRUCTIBLE_TARGET_BE.get(),
                         com.j3ly.hardenedtargets.client.renderer.IndestructibleTargetRenderer::new);
+                event.registerBlockEntityRenderer(ModBlockEntities.HANGING_TARGET_BE.get(),
+                        com.j3ly.hardenedtargets.client.renderer.HangingTargetRenderer::new);
+                event.registerBlockEntityRenderer(ModBlockEntities.HARDENED_HANGING_TARGET_BE.get(),
+                        com.j3ly.hardenedtargets.client.renderer.HardenedHangingTargetRenderer::new);
+                event.registerBlockEntityRenderer(ModBlockEntities.INDESTRUCTIBLE_HANGING_TARGET_BE.get(),
+                        com.j3ly.hardenedtargets.client.renderer.IndestructibleHangingTargetRenderer::new);
             });
         });
     }

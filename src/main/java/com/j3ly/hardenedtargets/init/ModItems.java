@@ -13,4 +13,10 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.REINFORCED_TARGET.get(), new Item.Properties()));
     public static final RegistryObject<Item> INDESTRUCTIBLE_TARGET = ITEMS.register("indestructible_target",
             () -> new BlockItem(ModBlocks.INDESTRUCTIBLE_TARGET.get(), new Item.Properties()));
+    public static final RegistryObject<Item> HANGING_TARGET = ITEMS.register("hanging_target",
+            () -> new BlockItem(ModBlocks.HANGING_TARGET.get(), new Item.Properties()));
+    public static final RegistryObject<Item> HARDENED_HANGING_TARGET = ITEMS.register("hardened_hanging_target",
+            () -> new BlockItem(ModBlocks.HARDENED_HANGING_TARGET.get(), new Item.Properties()));
+    public static final RegistryObject<Item> INDESTRUCTIBLE_HANGING_TARGET = ITEMS.register("indestructible_hanging_target",
+            () -> new BlockItem(ModBlocks.INDESTRUCTIBLE_HANGING_TARGET.get(), new Item.Properties()));
 }
