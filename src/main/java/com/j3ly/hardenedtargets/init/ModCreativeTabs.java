@@ -20,9 +20,6 @@ public class ModCreativeTabs {
                         output.accept(ModItems.UPSIDE_DOWN_REINFORCED_TARGET.get());
                         output.accept(ModItems.UPSIDE_DOWN_INDESTRUCTIBLE_TARGET.get());
                         output.accept(ModItems.NORMAL_UPSIDE_DOWN_TARGET.get());
-                        output.accept(ModItems.HANGING_TARGET.get());
-                        output.accept(ModItems.HARDENED_HANGING_TARGET.get());
-                        output.accept(ModItems.INDESTRUCTIBLE_HANGING_TARGET.get());
                     })
                     .build());
 }

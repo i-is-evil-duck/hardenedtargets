@@ -1,10 +1,7 @@
 package com.j3ly.hardenedtargets.init;
 
 import com.j3ly.hardenedtargets.HardenedTargetsMod;
-import com.j3ly.hardenedtargets.block.entity.HardenedHangingTargetBlockEntity;
 import com.j3ly.hardenedtargets.block.entity.HardenedTargetBlockEntity;
-import com.j3ly.hardenedtargets.block.entity.HangingTargetBlockEntity;
-import com.j3ly.hardenedtargets.block.entity.IndestructibleHangingTargetBlockEntity;
 import com.j3ly.hardenedtargets.block.entity.IndestructibleTargetBlockEntity;
 import com.j3ly.hardenedtargets.block.entity.NormalUpsideDownTargetBlockEntity;
 import com.j3ly.hardenedtargets.block.entity.UpsideDownHardenedTargetBlockEntity;
@@ -31,13 +28,4 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<NormalUpsideDownTargetBlockEntity>> NORMAL_UPSIDE_DOWN_TARGET_BE =
             BLOCK_ENTITIES.register("normal_upside_down_target",
                     () -> BlockEntityType.Builder.of(NormalUpsideDownTargetBlockEntity::new, ModBlocks.NORMAL_UPSIDE_DOWN_TARGET.get()).build(null));
-    public static final RegistryObject<BlockEntityType<HangingTargetBlockEntity>> HANGING_TARGET_BE =
-            BLOCK_ENTITIES.register("hanging_target",
-                    () -> BlockEntityType.Builder.of(HangingTargetBlockEntity::new, ModBlocks.HANGING_TARGET.get()).build(null));
-    public static final RegistryObject<BlockEntityType<HardenedHangingTargetBlockEntity>> HARDENED_HANGING_TARGET_BE =
-            BLOCK_ENTITIES.register("hardened_hanging_target",
-                    () -> BlockEntityType.Builder.of(HardenedHangingTargetBlockEntity::new, ModBlocks.HARDENED_HANGING_TARGET.get()).build(null));
-    public static final RegistryObject<BlockEntityType<IndestructibleHangingTargetBlockEntity>> INDESTRUCTIBLE_HANGING_TARGET_BE =
-            BLOCK_ENTITIES.register("indestructible_hanging_target",
-                    () -> BlockEntityType.Builder.of(IndestructibleHangingTargetBlockEntity::new, ModBlocks.INDESTRUCTIBLE_HANGING_TARGET.get()).build(null));
 }
