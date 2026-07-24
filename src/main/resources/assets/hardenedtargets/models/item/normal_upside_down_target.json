@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "hardenedtargets:item/reinforced_target"
+        "layer0": "hardenedtargets:item/normal_upside_down_target"
     }
 }
